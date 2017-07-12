@@ -1,0 +1,47 @@
+<wpml-config>
+	<admin-texts>
+		<key name="braintree_payment_settings">
+			<key name="card_number_label" />
+			<key name="card_expiration_date_label" />
+			<key name="card_expiration_month_label" />
+			<key name="card_expiration_year_label" />
+			<key name="card_cvv_label" />
+			<key name="card_postal_label" />
+			<key name="card_save_label" />
+			<key name="card_number_placeholder" />
+			<key name="card_cvv_placeholder" />
+			<key name="card_expiration_date_placeholder" />
+			<key name="card_expiration_month_placeholder" />
+			<key name="card_expiration_year_placeholder" />
+			<key name="card_postal_placeholder" />
+			<key name="title_text" />
+			<key name="paypal_gateway_title" />
+			<key name="paypal_display_name" />
+			<key name="paypal_credit_title" />
+			<key name="applepay_gateway_title" />
+			<key name="applepay_store_name" />
+			<key name="applepay_store_name" />
+			<key name="checkout_fee_title"/>
+			<key name="paypal_billing_agreement_desc"/>
+			<key name="donation_card_number_label" />
+			<key name="donation_card_expiration_date_label" />
+			<key name="donation_card_expiration_month_label" />
+			<key name="donation_card_expiration_year_label" />
+			<key name="donation_card_cvv_label" />
+			<key name="donation_card_postal_label" />
+			<key name="donation_card_save_label" />
+			<key name="donation_card_number_placeholder" />
+			<key name="donation_card_cvv_placeholder" />
+			<key name="donation_card_expiration_date_placeholder" />
+			<key name="donation_card_expiration_month_placeholder" />
+			<key name="donation_card_expiration_year_placeholder" />
+			<key name="donation_card_postal_placeholder" />
+			<key name="donation_button_text" />
+			<key name="donation_gateway_title" />
+			<key name="paypal_donation_gateway_title" />
+			<key name="paypal_donation_display_name" />
+			<key name="paypal_credit_donation_title" />
+			<key name="donation_modal_button_text" />
+		</key>
+	</admin-texts>
+</wpml-config>

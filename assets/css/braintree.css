@@ -1,0 +1,609 @@
+@CHARSET "ISO-8859-1";
+
+#braintree-dropin-container iframe, #braintree-hostedfields-container iframe{
+	opacity: 1 !important;
+}
+body.bfwc-body .bfwc-new-payment-method-container{
+	position: relative;
+}
+body.bfwc-body div.payment_box [class*="braintree"] *,
+body.bfwc-body div.payment_box [class*="bfwc"] *,
+body.bfwc-body .bfwc-payment-method-container,
+body.bfwc-body .bfwc-payment-method-container *:after,
+body.bfwc-body .bfwc-payment-method-container *:before,
+body.bfwc-body div.payment_box [class*="bfwc"] *:after,
+body.bfwc-body div.payment_box [class*="bfwc"] *:before{
+	box-sizing: border-box !important;
+}
+body.bfwc-body .bfwc-payment-method-container .braintree-payment-method,
+body.bfwc-body .bfwc-new-payment-method-container .braintree-payment-method{
+	display: flex;
+	display: -webkit-flex;
+	position: relative;
+	align-items: center;
+	height: 56px;
+	background-color: #fff;
+	border-width: 1px 0px 1px 0px;
+	border-color: #DEE2E5;
+	border-style: solid;
+	margin-top: -1px;
+	cursor: pointer;
+	transition: background-color 350ms ease;
+}
+body.bfwc-body .bfwc-new-payment-method-container .braintree-payment-method.paypal{
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+body.bfwc-body .bfwc-payment-method-container .braintree-payment-method.selected,
+body.bfwc-body .bfwc-payment-method-container .braintree-payment-method:hover{
+	background-color: #E8F5EB;
+}
+
+body.bfwc-body .bfwc-payment-method-container .payment-method-description,
+body.bfwc-body .bfwc-new-payment-method-container .payment-method-description{
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open,
+body.bfwc-body .bfwc-new-payment-method-container .payment-method-type{
+	display: inline-block;
+	width: 44px;
+	height: 28px;
+	margin-left: 10px;
+	background-repeat: no-repeat;
+}
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed{
+	width: 35px;
+	height: 22px;
+	display: inline-block;
+	margin-left: 10px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label,
+body.bfwc-body .select2-container .select2-bfwc-chosen{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.open,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.open,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.open{
+	display: inline-block;
+	width: 44px;
+	height: 28px;
+	margin: 0px 10px 0px 0px;
+	background-repeat: no-repeat;
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.enclosed,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.enclosed,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.enclosed,
+body.bfwc-body span.payment-method-type.enclosed{
+	display: inline-block;
+	width: 35px;
+	height: 22px;
+	margin: 0px 10px 0px 0px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.open.MasterCard,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.open.MasterCard,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.open.MasterCard,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.MasterCard {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -317px;
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.open.Visa,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.open.Visa,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.open.Visa,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.Visa,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.ApplePay-Visa {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -429px;
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.open.Discover,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.open.Discover,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.open.Discover,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.Discover,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.ApplePay-Discover{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 84px auto;
+	background-position: 0 -199px;
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.open.Diners,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.open.Diners,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.open.Diners,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.Diners,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.ApplePay-Diners {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 110px auto;
+	background-position: 0 -230px;
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.Maestro,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.Maestro,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.Maestro,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.Maestro,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.ApplePay-Maestro {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -289px;
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.open.AmericanExpress,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.open.AmericanExpress,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.open.AmericanExpress,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.AmericanExpress,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.ApplePay-AmericanExpress {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -399px;
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.open.JCB,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.open.JCB,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.open.JCB,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.JCB,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.ApplePay-JCB {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.open.paypal,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.open.paypal,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.open.paypal,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.paypal,
+body.bfwc-body .bfwc-new-payment-method-container .payment-method-type.open.paypal{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 96px auto;
+	background-position: 0 -511px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .payment-method-type.open.paypal{
+vertical-align: middle;
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.open.ApplePay,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.open.ApplePay
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.open.ApplePay,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.open.ApplePay{
+	background-image: url('../img/applepay/Apple_Pay_mark_large_@3x.png');
+	background-size: 100%;
+	margin: 0px 0px 0px 10px;
+}
+
+/******* enclosed icons ******/
+
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.enclosed.MasterCard,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.enclosed.MasterCard,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.enclosed.MasterCard,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.MasterCard {
+	background-image: url('../img/payment-methods/master_card.png');
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.enclosed.Visa,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.enclosed.Visa,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.enclosed.Visa,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.Visa,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.ApplePay-Visa {
+	background-image: url('../img/payment-methods/visa.png');
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.enclosed.Discover,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.enclosed.Discover,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.enclosed.Discover,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.Discover,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.ApplePay-Discover{
+	background-image: url('../img/payment-methods/discover.png');
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.enclosed.Diners,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.enclosed.Diners,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.enclosed.Diners,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.Diners,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.ApplePay-Diners {
+	background-image: url('../img/payment-methods/diners_club_international.png');
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.Maestro,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.Maestro,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.Maestro,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.Maestro,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.ApplePay-Maestro {
+	background-image: url('../img/payment-methods/maestro.png');
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.enclosed.AmericanExpress,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.enclosed.AmericanExpress,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.enclosed.AmericanExpress,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.AmericanExpress,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.ApplePay-AmericanExpress {
+	background-image: url('../img/payment-methods/amex.png');
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.open.JCB,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.enclosed.JCB,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.enclosed.JCB,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.JCB,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.ApplePay-JCB {
+	background-image: url('../img/payment-methods/jcb.png');
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.enclosed.paypal,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.enclosed.paypal,
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.enclosed.paypal,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.paypal,
+body.bfwc-body .bfwc-new-payment-method-container .payment-method-type.enclosed.paypal{
+	background-image: url('../img/payment-methods/paypal.png');
+}
+body.bfwc-body .select2-drop .select2-bfwc-result-label .select2-cardType.enclosed.ApplePay,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.enclosed.ApplePay
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.enclosed.ApplePay,
+body.bfwc-body .bfwc-payment-method-container .payment-method-type.enclosed.ApplePay{
+	background-image: url('../img/applepay/Apple_Pay_mark_large_@3x.png');
+}
+
+/****************************/
+
+body.bfwc-body div.bfwc-payment-method-buttons{
+	overflow: hidden;
+	margin: 0px 0px 10px 0px;
+}
+
+body.bfwc-body .bfwc-payment-method-buttons a {
+	float: right;
+	color: #3c94d4;
+	background: none;
+	cursor: pointer;
+	font-size: 14px;
+	border: none;
+}
+
+#braintree_3ds_container {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.8);
+	transition: all 500ms linear;
+}
+
+.bfwc-3ds .threeDS-body {
+	overflow: hidden !important;
+}
+
+.bfwc-3ds .threeDS-hosted-modal .threeDS-container {
+	height: 480px;
+	width: 440px;
+	background: #fff;
+	padding: 0px;
+	border-radius: 4px;
+	background-color: #eee;
+	margin: 0 auto;
+}
+
+.bfwc-3ds .threeDS-hosted-modal .threeDS-container .threeDS-frame-body {
+	height: 400px;
+	width: 100%;
+	margin: 0px;
+	background-color: white;
+	border: 1px solid lightgray;
+}
+
+body.bfwc-body .payment_methods .braintree-accepted-payment-methods,
+body.bfwc-body .payment_method_braintree_payment_gateway .braintree-accepted-payment-methods{
+	display: inline-block;
+}
+body.bfwc-body .payment_method_braintree_payment_gateway .braintree-accepted-payment-methods.bfwc-inside{
+	margin-bottom: 10px;
+}
+.payment_methods .braintree-accepted-payment-methods span,
+.payment_method_braintree_payment_gateway .braintree-accepted-payment-methods span
+	{
+	display: inline-block;
+	vertical-align: middle;
+	width: 44px;
+	height: 28px
+}
+
+.payment_methods .braintree-accepted-payment-methods .payment-method-icon.master_card
+{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -317px;
+}
+
+.payment_methods .braintree-accepted-payment-methods .payment-method-icon.visa
+	{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -429px;
+}
+
+.payment_methods .braintree-accepted-payment-methods .payment-method-icon.amex
+	{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -399px;
+}
+
+.payment_methods .braintree-accepted-payment-methods .payment-method-icon.discover
+	{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -204px;
+}
+
+.payment_methods .braintree-accepted-payment-methods .payment-method-icon.maestro
+	{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -289px;
+}
+
+.payment_methods .braintree-accepted-payment-methods .payment-method-icon.jcb
+	{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+
+.payment_methods .braintree-accepted-payment-methods .payment-method-icon.diners_club_international
+	{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -178px;
+}
+
+.payment_methods .braintree-accepted-payment-methods .payment-method-icon.paypal
+	{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -456px;
+}
+
+.payment_methods .braintree-accepted-payment-methods .payment-method-icon.china_union_pay
+	{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -492px;
+}
+
+body.bfwc-3ds .braintree-3ds-overlay {
+	display: none;
+	position: fixed;
+	z-index: 102;
+	top: -100px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 125%;
+	width: 100%;
+	background: #000;
+	opacity: 0.5;
+	will-change: opacity;
+}
+
+.bfwc-3ds .threeDS-hosted-modal {
+	z-index: 99999999999999999;
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	background-color: #fafafa;
+	padding: 0;
+	max-height: 70%;
+	max-width: 457px;
+	margin: auto;
+	overflow-y: auto;
+	border-radius: 2px;
+	transform: scaleX(1.0);
+	will-change: top, opacity;
+	top: 10%;
+}
+
+.bfwc-3ds .threeDS-container .threeDS-modal-header {
+	height: 40px;
+	text-align: center;
+	background: transparent;
+	line-height: 40px;
+}
+
+.bfwc-3ds .threeDS-container .threeDS-cancel {
+	height: 40px;
+	text-align: center;
+	color: #337ab7;
+	cursor: pointer;
+	width: 100%;
+	background: transparent;
+	line-height: 40px;
+}
+
+body.bfwc-body label .paypal-icon.paypal {
+	padding: 0px;
+	border: none;
+	display: inline-block;
+	vertical-align: middle;
+	width: 44px;
+	height: 28px;
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 106px auto;
+	background-position: 0 -566px;
+}
+body.bfwc-body label .paypal-credit-icon.paypal {
+	background: transparent;
+	display: inline-block;
+	vertical-align: middle;
+	width: 82px;
+	height: 100%;
+	background-size: 106px auto;
+	background-position: 0 -566px;
+}
+body.bfwc-body label .paypal-credit-icon.paypal img,
+body.bfwc-body label .paypal-credit-icon.paypal img{
+	padding: 0px;
+	border: none;
+	background: transparent;
+}
+body.bfwc-body #braintree-paypal-tokenized {
+	display: none;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-tokenized-paypal-method .bfwc-paypal-cancel,
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-tokenized-paypal-method .bfwc-paypal-credit-cancel {
+	color: #3c94d4;
+	margin-right: 10px;
+}
+body.bfwc-body .payment_method_braintree_applepay_payments .braintree-applepay.mark{
+	display: inline-block;
+    vertical-align: middle;
+    width: 44px;
+    height: 28px;
+    background-image: url(../img/applepay/apple_pay_payment_mark.png);
+    background-size: 100%;
+}
+body.bfwc-body #braintree-applepay-button{
+	max-width: 200px;
+}
+body.bfwc-body .braintree-payment-gateway .braintree-applepay-warning,
+body.bfwc-body .applepay-button-container .braintree-applepay-warning{
+	margin: 10px 0px;
+	border: 1px solid red;
+	padding: 10px 10px;
+	box-shadow: 1px 2px 12px 1px rgba(255, 144, 144, 0.62)
+}
+body.bfwc-body .select2-container .select2-choice{
+	padding: 6px 8px 6px 8px;
+}
+body.bfwc-body .bfwc-select2-4 .select2-selection{
+	min-height: 42px;
+    height: 100%;
+}
+body.bfwc-body .bfwc-select2-4 .select2-selection--single .select2-selection__rendered{
+	line-height: 42px;
+}
+body.bfwc-body .bfwc-select2-4 .select2-selection--single .select2-selection__arrow{
+	height: 40px;
+}
+@media (max-width: 375px){
+body.bfwc-body #braintree-paypal-tokenized .bfwc-paypal-cancel{
+	top: 2px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .payment-method-type,
+body.bfwc-body .bfwc-new-payment-method-container .payment-method-description{
+	margin-top: 0px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .payment-method-type{
+	margin-left: 0px;
+}
+}
+@media (max-width: 415px){
+	body.bfwc-body .bfwc-new-payment-method-container .braintree-payment-method.paypal{
+		align-items: flex-start;
+	}
+	body.bfwc-body .bfwc-new-payment-method-container .bfwc-tokenized-paypal-method .bfwc-paypal-cancel{
+		bottom: 0;
+	}
+}
+@media (max-width: 320px){
+	body.bfwc-body .bfwc-new-payment-method-container .payment-method-description{
+		margin-top: 0px;
+	}
+	body.bfwc-body .bfwc-payment-method-container .payment-method-description{
+		font-size: 11px;
+	}
+	body.bfwc-body .bfwc-new-payment-method-container .payment-method-type{
+		margin: 0px;
+	}
+	body.bfwc-body .bfwc-new-payment-method-container .braintree-payment-method.paypal .payment-method-description{
+		padding-left: 0px;
+	}
+}
+body.bfwc-body .bfwc-new-payment-method-container #braintree-dropin-form{
+    padding: 10px;
+    background: #fff;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-dropin-row {
+	zoom: 1;
+	display: block;
+	clear: both;
+}
+body .bfwc-body .bfwc-new-payment-method-container .bfwc-dropin-row:before{
+	content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden
+}
+body .bfwc-body .bfwc-new-payment-method-container .bfwc-dropin-column{
+    
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-dropin-card-label{
+	
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-dropin-field-name{
+	color: #6E787F;
+    font-size: 12px;
+    width: 100%;
+    display: block;
+    padding: 0px 24px;
+    margin-bottom: 2px
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-dropin-row input[type="checkbox"]{
+	display: none;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-dropin-row label.bfwc-dropin-save-label{
+	display: inline-block !important;
+	position: relative !important;
+  	margin-top: 0px;
+	padding: 0px 24px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-dropin-row input[type="checkbox"]:checked + label.bfwc-dropin-save-label:before{
+	position: absolute;
+    top: 1px;
+    width: 8px;
+    height: 15px;
+    content: "";
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    border-radius: 2px;
+    -webkit-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    transition: all ease-in 0.3s;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-dropin-row label.bfwc-dropin-save-label:after{
+	content: "";
+	display: inline-block;
+	border: 1px solid #DEE2E5;
+ 	width: 20px;
+    height: 20px;
+    background-color: #fff;
+    z-index: 0;
+    cursor: pointer;
+    transition: all ease-in 0.3s;	
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-payment-loader{
+	width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 999999999999;
+}
+body.bfwc-body span.bfwc-enclosed-method-icon {
+	display: inline-block;
+	width: 35px;
+}
+body.bfwc-body span.bfwc-enclosed-method-icon:nth-child(n){
+	margin-right: 10px;
+}
+body.bfwc-body span.bfwc-enclosed-method-icon img {
+	width: 100%;
+	padding: 0px;
+}
+body.bfwc-body span.payment-method-type.enclosed.paypal{
+	vertical-align: middle;
+}

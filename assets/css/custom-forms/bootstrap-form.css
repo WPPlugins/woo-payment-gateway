@@ -1,0 +1,274 @@
+@CHARSET "ISO-8859-1";
+
+body.bfwc-body .bfwc-new-payment-method-container .panel {
+	width: 80%;
+	margin: 2em auto;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .bootstrap-basic {
+	background: white;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .panel-body {
+	width: 90%;
+	margin: 2em auto;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .helper-text {
+	color: #8A6D3B;
+	font-size: 12px;
+	margin-top: 5px;
+	height: 12px;
+	display: block;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .row *{
+	    box-sizing: border-box;
+}
+body.bfwc-body .bfwc-new-payment-method-container .row:before,
+body.bfwc-body .bfwc-new-payment-method-container .panel-body:before, 
+body.bfwc-body .bfwc-new-payment-method-container .row:after, 
+body.bfwc-body .bfwc-new-payment-method-container .row:before{
+	display: table;
+    content: " ";
+    
+}
+body.bfwc-body .bfwc-new-payment-method-container .row:after {
+    clear: both;
+}
+body.bfwc-body .bfwc-new-payment-method-container .form-group {
+    margin-bottom: 15px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-12,
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-8,
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-6,
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-4{
+	float: left;
+}
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-4, 
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-5, 
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-6, 
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-7, 
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-8, 
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-9,
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-4 {
+    width: 33.33333333%;
+}
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-6 {
+    width: 50%;
+}
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-12 {
+    width: 100%;
+}
+body.bfwc-body .bfwc-new-payment-method-container .col-xs-8 {
+    width: 66.66666667%;
+}
+body.bfwc-body .bfwc-new-payment-method-container .form-group label{
+	max-width: 100%;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+body.bfwc-body .bfwc-new-payment-method-container .form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+body.bfwc-body .bfwc-new-payment-method-container .has-success .control-label,
+body.bfwc-body .bfwc-new-payment-method-container .has-success .control-label {
+    color: #3c763d;
+}
+body.bfwc-body .bfwc-new-payment-method-container .has-warning .control-label,
+body.bfwc-body .bfwc-new-payment-method-container .has-warning .control-label {
+	color: #8a6d3b;
+}
+/* Braintree Hosted Fields styling classes*/
+body.bfwc-body .bfwc-new-payment-method-container #braintree-hostedfields-container .form-group .braintree-hosted-fields-focused,
+body.bfwc-body .bfwc-new-payment-method-container .form-group .braintree-hosted-fields-focused,
+body.bfwc-body .bfwc-new-payment-method-container .form-group .braintree-hosted-fields-focused.braintree-hosted-fields-valid,
+body.bfwc-body .bfwc-new-payment-method-container #braintree-hostedfields-container .form-group .braintree-hosted-fields-focused.braintree-hosted-fields-invalid,
+body.bfwc-body .bfwc-new-payment-method-container .form-group .braintree-hosted-fields-focused.braintree-hosted-fields-invalid{
+	border: 1px solid #0275d8 !important;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px
+		rgba(102, 175, 233, .6) !important;
+}
+body.bfwc-body .bfwc-new-payment-method-container #braintree-hostedfields-container .form-group .braintree-hosted-fields-invalid,
+body.bfwc-body .bfwc-new-payment-method-container .form-group .braintree-hosted-fields-invalid{
+	border: 1px solid #8a6d3b !important;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px
+		rgba(100, 100, 0, .6) !important;
+}
+body.bfwc-body .bfwc-new-payment-method-container .form-control.braintree-hosted-fields-valid,
+body.bfwc-body .bfwc-new-payment-method-container .form-group .braintree-hosted-fields-valid{
+	border-color: #3c763d;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+body.bfwc-body .small-container .row .form-group {
+	width: 100%;
+}
+body.bfwc-body #bfwc-card-number{
+	position: relative;
+}
+body.bfwc-body .row .form-group .bfwc-card-type.open{
+	position: absolute;
+	right: 5px;
+	width: 44px;
+	height: 28px;
+	top: 50%;
+	transform: translatey(-50%);
+	-webkit-transform: translatey(-50%);
+	-ms-transform: translatey(-50%);
+	background-image: url('../../img/payment-method-sprites.png');
+}
+body.bfwc-body .row .form-group .bfwc-card-type.open.visa {
+	background-size: 86px auto;
+	background-position: 0 -429px;
+}
+body.bfwc-body .row .form-group .bfwc-card-type.open.master-card {
+	background-size: 86px auto;
+	background-position: 0 -317px;
+}
+body.bfwc-body .row .form-group .bfwc-card-type.open.discover {
+	background-size: 84px auto;
+	background-position: 0 -199px;
+}
+body.bfwc-body .row .form-group .bfwc-card-type.open.diners-club {
+	background-size: 110px auto;
+	background-position: 0 -230px;
+}
+body.bfwc-body .row .form-group .bfwc-card-type.open.maestro {
+	background-size: 86px auto;
+	background-position: 0 -289px;
+}
+body.bfwc-body .row .form-group .bfwc-card-type.open.american-express {
+	background-size: 86px auto;
+	background-position: 0 -399px;
+}
+body.bfwc-body .row .form-group .bfwc-card-type.open.jcb {
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+body.bfwc-body .row .form-group .bfwc-card-type.open.unionpay {
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+
+/******* enclosed *******/
+body.bfwc-body .row .form-group .bfwc-card-type.enclosed{
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	-webkit-transform: translatey(-50%);
+	-ms-transform: translatey(-50%);
+	right: 5px;
+	width: 35px;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+    border-radius: 3px;
+}
+
+body.bfwc-body .row .form-group .bfwc-card-type.enclosed.visa{
+	background-image: url('../../img/payment-methods/visa.png');
+}
+body.bfwc-body .row .form-group .bfwc-card-type.enclosed.master-card{
+	background-image: url('../../img/payment-methods/master_card.png');
+}
+body.bfwc-body .row .form-group .bfwc-card-type.enclosed.discover{
+	background-image: url('../../img/payment-methods/discover.png');
+}
+body.bfwc-body .row .form-group .bfwc-card-type.enclosed.diners-club{
+	background-image: url('../../img/payment-methods/diners_club_international.png');
+}
+body.bfwc-body .row .form-group .bfwc-card-type.enclosed.maestro{
+	background-image: url('../../img/payment-methods/maestro.png');
+}
+body.bfwc-body .row .form-group .bfwc-card-type.enclosed.american-express{
+	background-image: url('../../img/payment-methods/amex.png');
+}
+body.bfwc-body .row .form-group .bfwc-card-type.enclosed.jcb{
+	background-image: url('../../img/payment-methods/jcb.png');
+}
+/***********************/
+
+body.bfwc-body .row .form-group .save-card-label{
+	display: block;
+}
+body.bfwc-body .row .form-group:last-child:nth-child(odd) {
+	width: 100%;
+}
+
+body.bfwc-body .row .form-group input[type="checkbox"]{
+	display: none;
+}
+body.bfwc-body .row .form-group input[type="checkbox"] + label.bfwc-save-label
+{
+	position: relative;
+	display: inline-block !important;
+}
+body.bfwc-body .row .form-group input[type="checkbox"]:checked + label.bfwc-save-label:before{
+	position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 8px;
+    height: 15px;
+    content: "";
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid #0275d8;
+    border-bottom: 2px solid #0275d8;
+    border-radius: 2px;
+    -webkit-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    box-sizing: border-box;
+}
+body.bfwc-body .row .form-group input[type="checkbox"] + label.bfwc-save-label:after{
+	background-color: #fff;
+	border: 1px solid #ccc !important;
+    border-radius: 4px;
+    display: inline-block;
+    content: "";
+    top: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+body.bfwc-body .row .form-group input[type="checkbox"]:checked + label.bfwc-save-label:after{
+	border: 1px solid #0275d8 !important;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px
+		rgba(102, 175, 233, .6) !important;
+}
+@media ( max-width : 670px) {
+	body.bfwc-body .bfwc-new-payment-method-container .form-group {
+		width: 100% !important;
+	}
+}

@@ -1,0 +1,66 @@
+body.wp-admin p.plan-field {
+	padding: 0px 0px 0px 162px !important;
+}
+
+body.wp-admin p span.braintree-product-plan {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding: 6px 14px;
+	line-height: normal;
+	font-size: 14px;
+	vertical-align: middle;
+	height: auto;
+}
+
+body.wp-admin div.plan-container {
+	padding: 5px 10px 5px 10px;
+	display: block;
+	vertical-align: top;
+	margin-bottom: 3px;
+}
+
+body.wp-admin .plan-container .ul-choices {
+	height: auto !important;
+	height: 1%;
+	margin: 0;
+	padding: 3px;
+	/* position: relative; */
+	border: 1px solid #ccc;
+	cursor: text;
+	overflow: hidden;
+	background-color: #fff;
+	min-height: 26px;
+}
+
+body.wp-admin .plan-container .ul-choices li a.select2 {
+	left: 7px;
+	display: block;
+	width: 12px;
+	height: 13px;
+	position: absolute;
+	right: 7px;
+	top: 6px;
+	font-size: 1px;
+	outline: 0;
+	background: url(../../img/select2.png) right top no-repeat;
+}
+
+body.wp-admin li.product-plan {
+	float: left;
+	list-style: none;
+	padding: 5px 8px 5px 24px;
+	margin: 5px;
+	position: relative;
+	line-height: 15px;
+	color: #333;
+	cursor: default;
+	border-radius: 2px;
+	background-clip: padding-box;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: #e4e4e4;
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .2);
+}

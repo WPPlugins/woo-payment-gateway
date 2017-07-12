@@ -1,0 +1,81 @@
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-method{
+	display: inline-block;
+	width: 35px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-method img{
+	padding: 0px;
+	border-radius: 3px;
+}
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open{
+	display: inline-block;
+	vertical-align: middle;
+    margin-right: 10px;
+	width: 44px;
+	height: 28px;
+	margin-left: 10px;
+	background-repeat: no-repeat;
+	background-image: url('../img/payment-method-sprites.png');
+}
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.mastercard
+{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -317px;
+}
+
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.visa,
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.apple_pay_-_visa{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -429px;
+}
+
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.american_express,
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.apple_pay_-_american_express{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -399px;
+}
+
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.discover,
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.apple_pay_-_discover{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -204px;
+}
+
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.maestro,
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.apple_pay_-_maestro{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -289px;
+}
+
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.jcb,
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.apple_pay_-_jcb{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.diners,
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.apple_pay_-_diners{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -178px;
+}
+
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.paypal
+	{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -456px;
+}
+
+body.bfwc-body .woocommerce-MyAccount-content .bfwc-payment-method-open.china_union_pay{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -492px;
+}

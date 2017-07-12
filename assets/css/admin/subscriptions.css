@@ -1,0 +1,56 @@
+@CHARSET "ISO-8859-1";
+
+td.column-status div mark {
+	display: block;
+	text-align: center;
+	padding: 2px 2px;
+	color: #fff;
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+	box-shadow: 1px 1px 1px 1px rgba(189, 189, 189, 0.5);
+	-webkit-box-shadow: 1px 1px 1px 1px rgba(189, 189, 189, 0.5);
+	transition: all ease-in 0.3s;
+}
+td.column-status mark:hover{
+	box-shadow: 1px 1px 1px 1px rgba(189, 189, 189, 0.5);
+	-webkit-box-shadow: 3px 3px 4px 1px rgba(189, 189, 189, 0.5);
+}
+td.column-status mark.active{
+	background-color: rgba(82, 162, 82, 0.85);
+}
+td.column-status mark.pending{
+	background-color: #ffba00;
+}
+td.column-status mark.cancelled{
+	background-color: #afafaf;
+}
+td.column-status mark.failed,
+td.column-status mark.on-hold,
+td.column-status mark.past-due{
+	background-color: #E66F00;
+}
+td.column-status mark.expired{
+	background-color: #A0658B
+}
+
+#bfwc-subscriptions-metabox .woocommerce_order_items_wrapper table.woocommerce_order_items{
+	text-align: left;
+	width: 100%;
+}
+#bfwc-subscriptions-metabox .woocommerce_order_items_wrapper table.woocommerce_order_items th
+{
+	background: #f8f8f8;
+    padding: 8px;
+    font-size: 11px;
+    text-align: left;
+    color: #555;
+}
+#bfwc-subscriptions-metabox .woocommerce_order_items_wrapper table.woocommerce_order_items td{
+	border-bottom: 1px solid #dfdfdf;	
+}
+#bfwc-subscriptions-metabox .woocommerce_order_items_wrapper table.woocommerce_order_items td{
+	padding-left: 8px;
+}
+.wp-admin .select2-results .select2-disabled{
+	display: none;
+}

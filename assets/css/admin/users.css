@@ -1,0 +1,132 @@
+body.modal-open {
+	overflow: hidden;
+}
+
+div.bfwc-modal-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-height: 360px;
+	background: rgba(0, 0, 0, .7);
+	z-index: 99900
+}
+
+.bfwc-modal-overlay .modal {
+	z-index: 100000;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	position: fixed;
+	width: 500px;
+	background: #fff;
+	border-radius: 4px;
+	overflow-y: auto;
+	max-height: 500px
+}
+
+.bfwc-modal-overlay .modal-header {
+	padding: 9px 15px;
+	border-bottom: 1px solid #eee;
+	font-size: 24.5px;
+}
+
+.bfwc-modal-overlay .modal-header h3 {
+	margin: 0;
+	line-height: 30px;
+}
+
+.bfwc-modal-overlay .modal-body {
+	max-height: none;
+	overflow: visible;
+	padding: 15px;
+}
+
+.bfwc-modal-overlay .modal-header .close {
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #000000;
+	text-shadow: 0 1px 0 #ffffff;
+	opacity: 0.3;
+	margin-top: 2px;
+	border: none;
+	padding: 0;
+	width: 0px;
+	height: 0px;
+	position: relative;
+	cursor: pointer;
+	background: transparent;
+    width: 40px;
+    height: 40px;
+}
+
+.bfwc-modal-overlay .modal-header .close:before {
+	content: '';
+	color: #666;
+	display: block;
+	width: 3px;
+	height: 20px;
+	background: #666;
+	transform: rotate(45deg);
+	position:absolute;
+	top: 5px;
+	left: 50%;
+}
+.bfwc-modal-overlay .modal-header .close:after{
+	content: '';
+	color: #666;
+	display: block;
+	font-size: 25px;
+	width: 3px;
+	height: 20px;
+	background: #666;
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 5px;
+	left: 50%;
+}
+.bfwc-modal-overlay .modal-header .close:hover {
+	opacity: 0.4;
+}
+
+.bfwc-modal-overlay .modal-body .bfwc-error {
+	background-color: #EB5757;
+	border-width: 0 0 1px;
+	border-color: #EB5757;
+	border-style: solid;
+	/* border-radius: 0 0 4px 4px; */
+	display: flex;
+	align-items: center;
+	padding: 6px;
+	position: relative;
+	color: #fff;
+	margin: 5px 3px;
+}
+
+.bfwc-modal-overlay .modal-footer {
+	padding: 14px 15px 15px;
+	margin-bottom: 0;
+	text-align: right;
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+	-webkit-border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+	-webkit-box-shadow: inset 0 1px 0 #ffffff;
+	-moz-box-shadow: inset 0 1px 0 #ffffff;
+	box-shadow: inset 0 1px 0 #ffffff;
+}
+
+@media ( max-width : 979px) {
+	.bfwc-modal-overlay .modal-body, .modal-overflow .modal-body {
+		position: static;
+		margin: 0;
+		height: auto !important;
+		max-height: none !important;
+		overflow: visible !important;
+	}
+}

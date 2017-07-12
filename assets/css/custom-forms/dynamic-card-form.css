@@ -1,0 +1,457 @@
+body.bfwc-body header.dynamic-form-header {
+	z-index: 2;
+	transform: translate(0, 5.5em);
+	transition: all .5s ease;
+}
+
+body.bfwc-body header.header-slide {
+	transform: translate(0, 0);
+}
+
+body.bfwc-body .bfwc-new-payment-method-container h1 {
+	font-weight: 100;
+	font-size: 1.4em;
+	display: block;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .card-container {
+	display: flex;
+	background-color: #EEE;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	flex-direction: column;
+	border: 1em solid #fff;
+	box-sizing: border-box;
+	position: relative;
+}
+
+@media ( max-width : 476px) {
+	body.bfwc-body .card-container {
+		border: none;
+	}
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .card-container .cardinfo-wrapper {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+divbody.bfwc-body.small-container .cardinfo-wrapper {
+	display: block;
+}
+
+.bg-illustration {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.bg-illustration svg {
+	width: 100%;
+}
+body.bfwc-body .bfwc-new-payment-method-container .card-container .cardinfo-wrapper:last-child:nth-child(odd){
+	width: 100%;
+	justify-content: flex-start;
+}
+body.bfwc-body .bfwc-new-payment-method-container .card-container .cardinfo-wrapper .cardinfo-save-card input[type="checkbox"]{
+	display: none;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .card-container .cardinfo-wrapper .cardinfo-save-card label.bfwc-save-label{
+	position: relative;
+	display: inline-block !important;
+	background: transparent;
+}
+body.bfwc-body .bfwc-new-payment-method-container .card-container .cardinfo-wrapper .cardinfo-save-card input[type="checkbox"]:checked + label.bfwc-save-label:before{
+	position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 8px;
+    height: 15px;
+    content: "";
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    border-radius: 2px;
+    -webkit-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    transition: all ease-in 0.3s;
+    box-sizing: border-box;
+}
+body.bfwc-body .bfwc-new-payment-method-container .card-container .cardinfo-wrapper .cardinfo-save-card input[type="checkbox"] + label.bfwc-save-label:after{
+	border: 1px solid #eee !important;
+	background: rgba(255, 255, 255, 0.86);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+    border-radius: 2px;
+    display: inline-block;
+    content: "";
+    top: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 0;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+    box-sizing: border-box;
+}
+body.bfwc-body .card-container .cardinfo-wrapper .cardinfo-save-card input[type="checkbox"] + label.bfwc-save-label:after{
+	background-color: rgba(255, 255, 255, 0.86);
+}
+body.bfwc-body .card-container #dynamic-card-form.visa  .cardinfo-wrapper .cardinfo-save-card input[type="checkbox"]:checked + label.bfwc-save-label:before{
+	border-right: 3px solid #0D4AA2;
+    border-bottom: 3px solid #0D4AA2;
+}
+body.bfwc-body .card-container #dynamic-card-form.master-card .cardinfo-wrapper .cardinfo-save-card input[type="checkbox"]:checked + label.bfwc-save-label:before{
+	border-right: 3px solid #363636;
+    border-bottom: 3px solid #363636;
+}
+body.bfwc-body .card-container #dynamic-card-form.american-express .cardinfo-wrapper .cardinfo-save-card input[type="checkbox"]:checked + label.bfwc-save-label:before{
+	border-right: 3px solid #007CC3;
+    border-bottom: 3px solid #007CC3;
+}
+body.bfwc-body .card-container #dynamic-card-form.discover .cardinfo-wrapper .cardinfo-save-card input[type="checkbox"]:checked + label.bfwc-save-label:before{
+	border-right: 3px solid #d4bdaa;
+    border-bottom: 3px solid #d4bdaa;
+}
+body.bfwc-body .card-container #dynamic-card-form.maestro .cardinfo-wrapper .cardinfo-save-card input[type="checkbox"]:checked + label.bfwc-save-label:before{
+	border-right: 3px solid #0066cb;
+    border-bottom: 3px solid #0066cb;
+}
+body.bfwc-body .card-container #dynamic-card-form.jcb .cardinfo-wrapper .cardinfo-save-card input[type="checkbox"]:checked + label.bfwc-save-label:before{
+ 	border-right: 3px solid #0957a2;
+    border-bottom: 3px solid #0957a2;
+}
+
+.card-shape, #dynamic-card-form.visa, #dynamic-card-form.master-card,
+	#dynamic-card-form.american-express, #dynamic-card-form.maestro,
+	#dynamic-card-form.jcb, #dynamic-card-form.discover {
+	border-radius: 6px;
+	padding: 2em 2em 1em;
+}
+
+@media ( max-width : 476px) {
+	.card-shape, #dynamic-card-form.visa, #dynamic-card-form.master-card,
+		#dynamic-card-form.american-express {
+		padding: 2em 1.5em 1em;
+	}
+}
+
+#dynamic-card-form {
+	background-color: #FFF;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+	padding: 8em 3em 2em;
+	width: 25em;
+	margin-bottom: 2em;
+	transition: all 600ms cubic-bezier(0.2, 1.3, 0.7, 1);
+	animation: cardIntro 500ms cubic-bezier(0.2, 1.3, 0.7, 1);
+	z-index: 1;
+}
+
+body.bfwc-body .small-container #dynamic-card-form {
+	padding: 10px;
+	width: 100%;
+}
+
+body.bfwc-body .small-container .dynamic-form-header {
+	transform: translate3d(0, 0, 0);
+}
+
+.small-container .card-shape, .small-container #dynamic-card-form.visa,
+	.small-container #dynamic-card-form.master-card, .small-container #dynamic-card-form.american-express,
+	.small-container #dynamic-card-form.maestro, .small-container #dynamic-card-form.jcb,
+	.small-container #dynamic-card-form.discover
+	{
+	padding: 5px;
+}
+
+#dynamic-card-form:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+@media ( max-width : 476px) {
+	#dynamic-card-form {
+		box-sizing: border-box;
+		padding: 7em 2em 2em;
+		width: 100%;
+	}
+}
+
+.card-container #dynamic-card-form.visa {
+	color: #fff;
+	background-color: #0D4AA2;
+}
+
+.card-container #dynamic-card-form.master-card {
+	color: #fff;
+	background-color: #363636;
+}
+
+.card-container #dynamic-card-form.american-express {
+	color: #fff;
+	background-color: #007CC3;
+}
+.card-container #dynamic-card-form.discover{
+	color: #000;
+	background-color: #d4bdaa;
+}
+.card-container #dynamic-card-form.maestro {
+	color: #fff;
+	background-color: #0066cb;
+}
+
+.card-container #dynamic-card-form.jcb {
+	color: #fff;
+	background-color: #0957a2;
+}
+.card-container .cardinfo-label {
+	display: block;
+	font-size: 11px;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+}
+
+body.bfwc-body .card-container div.cardinfo-exp-date + .cardinfo-cvv,
+body.bfwc-body .card-container div.cardinfo-postal-code + .cardinfo-save-card {
+	margin-left: 1em;
+	width: 100%;
+}
+body.bfwc-body .card-container div.cardinfo-postal-code + .cardinfo-save-card{
+	text-align: right;
+}
+body.bfwc-body .card-container div..cardinfo-cvv,
+body.bfwc-body .card-container .cardinfo-save-card {
+	width: 100%;
+}
+
+#button-pay {
+	cursor: pointer;
+	width: 16em;
+	font-size: 15px;
+	border: 0;
+	padding: 1.2em 1em;
+	color: #fff;
+	background: #282c37;
+	border-radius: 4px;
+	z-index: 0;
+	transform: translateY(-100px);
+	transition: all 500ms cubic-bezier(0.2, 1.3, 0.7, 1);
+	opacity: 0;
+	-webkit-appearance: none;
+}
+
+#button-pay:hover {
+	background: #535b72;
+}
+
+#button-pay:active {
+	animation: cardIntro 200ms cubic-bezier(0.2, 1.3, 0.7, 1);
+}
+
+#button-pay.show-button {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.cardinfo-card-number {
+	position: relative;
+}
+
+.card-container .cardinfo-card-number .input-wrapper .bfwc-card-type {
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	right: 5px;
+	width: 44px;
+	height: 28px
+}
+
+.card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.open.visa {
+	background-image: url('../../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -429px;
+}
+.card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.open.master-card {
+	background-image: url('../../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -317px;
+}
+.card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.open.discover {
+	background-image: url('../../img/payment-method-sprites.png');
+	background-size: 84px auto;
+	background-position: 0 -199px;
+}
+.card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.open.diners-club {
+	background-image: url('../../img/payment-method-sprites.png');
+	background-size: 110px auto;
+	background-position: 0 -230px;
+}
+.card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.open.maestro {
+	background-image: url('../../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -289px;
+}
+.card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.open.american-express {
+	background-image: url('../../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -399px;
+}
+.card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.open.jcb {
+	background-image: url('../../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+.card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.open.unionpay {
+	background-image: url('../../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+
+/******* enclosed *******/
+body.bfwc-body .card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.enclosed{
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	-webkit-transform: translatey(-50%);
+	-ms-transform: translatey(-50%);
+	right: 5px;
+	width: 35px;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border-radius: 3px;
+}
+
+body.bfwc-body .card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.enclosed.visa{
+	background-image: url('../../img/payment-methods/visa.png');
+}
+body.bfwc-body .card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.enclosed.master-card{
+	background-image: url('../../img/payment-methods/master_card.png');
+}
+body.bfwc-body .card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.enclosed.discover{
+	background-image: url('../../img/payment-methods/discover.png');
+}
+body.bfwc-body .card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.enclosed.diners-club{
+	background-image: url('../../img/payment-methods/diners_club_international.png');
+}
+body.bfwc-body .card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.enclosed.maestro{
+	background-image: url('../../img/payment-methods/maestro.png');
+}
+body.bfwc-body .card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.enclosed.american-express{
+	background-image: url('../../img/payment-methods/amex.png');
+}
+body.bfwc-body .card-container .cardinfo-card-number .input-wrapper .bfwc-card-type.enclosed.jcb{
+	background-image: url('../../img/payment-methods/jcb.png');
+}
+/***********************/
+
+/*--------------------
+Inputs 
+--------------------*/
+body.bfwc-body .card-container .input-wrapper {
+	border-radius: 2px;
+	background: rgba(255, 255, 255, 0.86);
+	height: 2.75em;
+	border: 1px solid #eee;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+	padding: 5px 10px;
+	margin-bottom: 1em;
+	position: relative;
+}
+
+body.bfwc-body .cardinfo-card-number, .cardinfo-exp-date, .cardinfo-cvv, .cardinfo-save
+	{
+	transition: transform 0.3s;
+}
+
+body.bfwc-body .card-container .braintree-hosted-fields-focused {
+	border-color: #5db6e8;
+}
+
+body.bfwc-body .card-container .braintree-hosted-fields-invalid {
+	border-color: #E53A40;
+	animation: shake 500ms cubic-bezier(0.2, 1.3, 0.7, 1) both;
+	-webkit-animation: shake 500ms cubic-bezier(0.2, 1.3, 0.7, 1) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+
+/*--------------------
+Animations
+--------------------*/
+@keyframes cardIntro {
+  0% {
+    transform: scale(0.8) translate(0, 0);
+    -webkittransform: scale(0.8) translate(0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+    -webkit-transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+    -webkit-transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(1px, 0, 0);
+    -webkit-transform: translate3d(1px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0);
+    -webkit-transform: translate3d(-3px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(3px, 0, 0);
+    -webkit-transform: translate3d(3px, 0, 0);
+  }
+}
+@-webkit-keyframes cardIntro {
+  0% {
+    transform: scale(0.8) translate(0, 0);
+    -webkit-transform: scale(0.8) translate(0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+    -webkit- transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+    -webkit-transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(1px, 0, 0);
+    -webkit-transform: translate3d(1px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0);
+    -webkit-transform: translate3d(-3px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(3px, 0, 0);
+    -webkit-transform: translate3d(3px, 0, 0);
+  }
+}

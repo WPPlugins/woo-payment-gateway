@@ -1,0 +1,228 @@
+@CHARSET "ISO-8859-1";
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form *{
+	box-sizing: border-box;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form{
+	max-width: 500px;
+	background: rgba(45, 187, 255, 0.38);
+	background: linear-gradient(to top left, rgb(1, 38, 80), rgba(109, 161, 185, 0.58));
+	background: -webkit-linear-gradient(to top left, rgba(57, 162, 212, 0.9), rgba(109, 161, 185, 0.58));
+	padding: 20px;
+	border-radius: 8px;
+	transition: all 0.3s ease-in;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form h3{
+	color: #fff;
+	position: relative;
+	text-shadow: 0px 1px 1px #4d4d4d;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container label{
+	text-shadow: 0px -1px 1px rgba(7, 108, 156, 0.5);
+	display: block;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.open{
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	width: 44px;
+	height: 28px;
+	top: 50%;
+	transform: translatey(-50%);
+	-webkit-transform: translatey(-50%);
+	-ms-transform: translatey(-50%);
+	background-image: url('../../img/payment-method-sprites.png');
+}
+body.bfwc-body .small-container .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-small-width .bfwc-card-type{
+	top: -10px;
+	right: 6px;
+}
+@media (max-width: 375px){
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type{
+	top: -10px;
+}	
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-form-wrapper{
+	margin-bottom: 20px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-form-wrapper:last-child{
+	margin-bottom: 0px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-form-wrapper .bfwc-form-wrapper{
+	margin-bottom: 0px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container{
+	    align-self: flex-end;
+	    flex: 1;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container.field-save{
+	align-self: flex-start;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-field-container.field-year{
+	max-width: 80px;
+	margin-left: 10px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-field-container.field-cvv{
+	max-width: 80px;
+	margin-left: 15px;
+	position: absolute;
+	right: 0;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-field-container.field-exp-month{
+	max-width: 120px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-field-container.field-postal{
+	max-width: 210px;
+}
+body.bfwc-body .small-container .bfwc-new-payment-method-container .bfwc-field-container.field-postal{
+	width: 120px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-field-container.field-save{
+	width: 80px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-field-container:nth-child(n+2){
+	    margin-left: 10px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-form-wrapper .hosted-field{
+	height: 40px;
+	background: rgba(255, 255, 255, 0.88);
+	position: relative;
+	/* background-color: #fff; */
+	padding-left: 10px;
+	border-radius: 3px;
+	box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.6), inset 0px 1px 1px 0px rgba(0,0,0,.6);
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-form-wrapper .hosted-field.braintree-hosted-fields-invalid{
+	box-shadow: 0px 1px 12px 3px rgba(247, 70, 70, 0.6), inset 0px 1px 1px 0px rgba(0,0,0,.6);
+	background: rgb(247, 230, 230);
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-form-wrapper .hosted-field.braintree-hosted-fields-valid{
+	box-shadow: 0px 1px 12px 3px rgba(202, 255, 205, 0.46), inset 0px 1px 1px 0px rgba(0,0,0,.6);
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form label{
+	color: #fff;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-form-wrapper{
+	display: flex;
+	display: -webkit-flex;
+	position: relative;
+}
+
+body.bfwc-body .small-container .bfwc-new-payment-method-container .bfwc-card-form .bfwc-form-wrapper{
+	flex-wrap: wrap;
+}
+@media (max-width: 450px){
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-form-wrapper{
+	flex-wrap: wrap;	
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-form-wrapper{
+	margin-bottom: 10px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-field-container.field-save{
+	width: 40px;
+}
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.open.visa {
+	background-size: 86px auto;
+	background-position: 0 -429px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.open.master-card {
+	background-size: 86px auto;
+	background-position: 0 -317px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.open.discover {
+	background-size: 84px auto;
+	background-position: 0 -199px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.open.diners-club {
+	background-size: 110px auto;
+	background-position: 0 -230px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.open.maestro {
+	background-size: 86px auto;
+	background-position: 0 -289px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.open.american-express {
+	background-size: 86px auto;
+	background-position: 0 -399px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.open.jcb {
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.open.unionpay {
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+
+/******* enclosed *******/
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.enclosed{
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	-webkit-transform: translatey(-50%);
+	-ms-transform: translatey(-50%);
+	right: 5px;
+	width: 35px;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+    border-radius: 3px;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.enclosed.visa{
+	background-image: url('../../img/payment-methods/visa.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.enclosed.master-card{
+	background-image: url('../../img/payment-methods/master_card.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.enclosed.discover{
+	background-image: url('../../img/payment-methods/discover.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.enclosed.diners-club{
+	background-image: url('../../img/payment-methods/diners_club_international.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.enclosed.maestro{
+	background-image: url('../../img/payment-methods/maestro.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.enclosed.american-express{
+	background-image: url('../../img/payment-methods/amex.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container .bfwc-card-type.enclosed.jcb{
+	background-image: url('../../img/payment-methods/jcb.png');
+}
+/***********************/
+
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container input[type="checkbox"]{
+	display: none;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container label.bfwc-save-label:after{
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: rgba(255, 255, 255, 0.88);;
+	border-radius: 3px;
+	box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,.6);
+	transition: all 0.3s ease-in;
+	box-sizing: border-box;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-field-container input[type="checkbox"]:checked + label.bfwc-save-label:after{
+	    background-color: rgba(202, 255, 205, 0.52);
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-small-form .bfwc-field-container.field-cvv,
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-small-form .bfwc-field-container.field-save{
+	position: relative !important;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-small-form .bfwc-field-container.field-postal{
+	max-width: 120px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-form-wrapper .bfwc-field-container:last-of-type:not(:first-child){
+	position:absolute;
+	right:0px
+}
+body.bfwc-body .bfwc-new-payment-method-container .bfwc-card-form .bfwc-form-wrapper .bfwc-field-container.field-year{
+	position: relative !important;
+}

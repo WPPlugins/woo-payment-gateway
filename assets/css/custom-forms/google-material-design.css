@@ -1,0 +1,276 @@
+@CHARSET "ISO-8859-1";
+
+/*--------------------
+GENERAL
+--------------------*/
+/*@import url(https://fonts.googleapis.com/css?family=Roboto);*/
+body.bfwc-body .bfwc-new-payment-method-container *, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+/*--------------------
+PANEL FORM
+--------------------*/
+body.bfwc-body .bfwc-new-payment-method-container .panel {
+	background: #fff;
+	width: 100%;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16), 0 0 2px 0 rgba(0, 0, 0, .12);
+	box-sizing: border-box;
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel *{
+	box-sizing: border-box;
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel__header {
+	background: #3F51B5;
+	color: #fff;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .panel__header h1 {
+	color: #fff !important;
+	font-size: 1.5em;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .panel__header, .panel__footer {
+	padding: 1em 2em;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .panel__footer {
+	background: #f3f3f3;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .panel__content {
+	padding: 1em 2em;
+	overflow: hidden;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .textfield--float-label{
+	width: 50%;
+	float: left;
+	display: inline-block;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .textfield--float-label:last-child:nth-child(odd){
+	width: 100%;
+}
+
+body.bfwc-body .small-container .bfwc-new-payment-method-container .panel__content .textfield--float-label {
+	width: 100%;
+	float: left;
+	display: inline-block;
+}
+
+body.bfwc-body .small-container .bfwc-new-payment-method-container .panel {
+	width: 100%;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .hosted-field--label {
+	transform: translateY(0.4em);
+	font-size: 1.125em;
+	line-height: 32px;
+	transition: all .15s ease-out;
+	display: block;
+	width: 100%;
+	font-weight: 400;
+	overflow: hidden;
+	margin-bottom: 0.5em; &. label-float { height : 33px;
+	margin-bottom: -1px;
+	transform: translate(0, 0);
+	font-size: 12px;
+	line-height: 15px;
+	text-overflow: ellipsis;
+	color: #2196F3;
+	transition: all .15s ease-out
+}
+
+&
+.filled { @extend .label-float;
+	color: rgba(0, 0, 0, .54);
+}
+
+&
+.invalid { @extend .label-float;
+	color: #F44336;
+}
+
+}
+body.bfwc-body .bfwc-new-payment-method-container span.icon {
+	position: relative;
+	top: 0.2em;
+	margin-right: 0.2em;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container svg {
+	fill: #333;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field {
+	height: 32px;
+	margin-bottom: 1em;
+	display: block;
+	background-color: transparent;
+	color: rgba(0, 0, 0, .87);
+	border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, .26);
+	outline: 0;
+	width: 100%;
+	font-size: 16px;
+	padding: 0;
+	box-shadow: none;
+	border-radius: 0;
+	position: relative;
+}
+
+/*--------------------
+BT HOSTED FIELDS SPECIFIC 
+--------------------*/
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .braintree-hosted-fields-focused,
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .braintree-hosted-fields-valid {
+	border-bottom: 2px solid #3F51B5;
+	transition: all 200ms ease;
+}
+
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .braintree-hosted-fields-invalid {
+	border-bottom: 2px solid #E91E63;
+	transition: all 200ms ease;
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.open{
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	-webkit-transform: translatey(-50%);
+	-ms-transform: translatey(-50%);
+	right: 5px;
+	width: 44px;
+	height: 28px;
+	background-image: url('../../img/payment-method-sprites.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.enclosed{
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	-webkit-transform: translatey(-50%);
+	-ms-transform: translatey(-50%);
+	right: 5px;
+	width: 35px;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border-radius: 3px;
+}
+@media (max-width: 375px){
+	body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type{
+		top: 30px;
+		transform: translatey(0%);
+		-webkit-transform: translatey(0%);
+		-ms-transform: translatey(0%);
+	}
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.open.visa{
+	background-size: 86px auto;
+	background-position: 0 -429px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.open.master-card{
+	background-size: 86px auto;
+	background-position: 0 -317px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.open.discover{
+	background-size: 84px auto;
+	background-position: 0 -199px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.open.diners-club{
+	background-size: 110px auto;
+	background-position: 0 -230px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.open.maestro{
+	background-size: 86px auto;
+	background-position: 0 -289px;
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.open.american-express{
+	background-size: 86px auto;
+	background-position: 0 -399px;
+}
+
+/******* enclosed *******/
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.enclosed.visa{
+	background-image: url('../../img/payment-methods/visa.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.enclosed.master-card{
+	background-image: url('../../img/payment-methods/master_card.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.enclosed.discover{
+	background-image: url('../../img/payment-methods/discover.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.enclosed.diners-club{
+	background-image: url('../../img/payment-methods/diners_club_international.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.enclosed.maestro{
+	background-image: url('../../img/payment-methods/maestro.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.enclosed.american-express{
+	background-image: url('../../img/payment-methods/amex.png');
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .hosted-field .bfwc-card-type.enclosed.jcb{
+	background-image: url('../../img/payment-methods/jcb.png');
+}
+/***********************/
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .textfield--float-label input[type="checkbox"]{
+	display: none;
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .textfield--float-label input[type="checkbox"] + label.bfwc-save-label
+{
+	position: relative;
+	display: inline-block !important;
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .textfield--float-label input[type="checkbox"]:checked + label:before{
+	position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 8px;
+    height: 15px;
+    content: "";
+    opacity: 1;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-radius: 2px;
+    -webkit-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    transition: all ease-in 0.3s;
+    box-sizing: border-box;
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .textfield--float-label input[type="checkbox"] + label:after{
+	border: 1px solid rgba(0, 0, 0, .26) !important;
+    border-radius: 4px;
+    display: inline-block;
+    content: "";
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    z-index: 0;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+    box-sizing: border-box;
+}
+body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .textfield--float-label input[type="checkbox"]:checked + label:after
+{
+	 background-color: #3F51B5;
+}
+/*---------------------
+Media Queries
+----------------------*/
+@media ( max-width : 600px) {
+	
+	body.bfwc-body .bfwc-new-payment-method-container .panel {
+		width: 100%;
+	}
+	body.bfwc-body .bfwc-new-payment-method-container .panel .panel__content .textfield--float-label {
+		width: 100%;
+		float: none;
+		display: inline-block;
+	}
+}

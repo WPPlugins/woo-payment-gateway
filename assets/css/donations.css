@@ -1,0 +1,419 @@
+.braintree-donation-field-container {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+}
+
+#braintree_donation_payment_form, #braintree_payment_methods {
+	clear: both;
+	margin-top: 10px;
+}
+
+.braintree-donation-container:after {
+	clear: both;
+}
+
+.braintree-donation-container .field-container {
+	width: 50%;
+}
+
+.braintree-donation-field-container .field-container input,
+	.braintree-donation-field-container .field-container select {
+	height: 35px;
+	width: 80%;
+}
+
+.braintree-donation-field-container .field-container textarea {
+	width: 80%;
+}
+
+.braintree-donation-field-container .field-container select {
+	font-size: 14px;
+}
+
+.braintree-donation-container ul.donation-error {
+	border-width: 1px 1px 1px 4px;
+	border-color: #b85f56;
+	padding: 5px 10px;
+	background: #fff;
+	border-style: solid;
+	list-style: none;
+}
+
+.donation-overlay {
+	display: none;
+	position: fixed;
+	z-index: 9999996;
+	top: -100px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 125%;
+	width: 100%;
+	background: #000;
+	opacity: 0.5;
+	will-change: opacity;
+}
+
+.braintree-donation-container .braintree-modal {
+	z-index: 9999997;
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	background-color: #fafafa;
+	padding: 0;
+	max-height: 70%;
+	width: 55%;
+	margin: auto;
+	overflow-y: auto;
+	border-radius: 2px;
+	transform: scaleX(1.0);
+	will-change: top, opacity;
+	top: 10%;
+}
+
+.braintree-modal.open {
+	display: block;
+	z-index: 1003;
+	opacity: 1;
+	transform: scaleX(1.0);
+	top: 10%;
+}
+
+.braintree-donation-container .braintree-modal .modal-content {
+	padding: 24px;
+	position: relative;
+}
+
+.braintree-donation-container .braintree-modal .modal-footer {
+	padding: 0px 24px;
+	margin: 0px 0px 10px 0px;
+	height: 56px;
+}
+
+.braintree-donation-container .braintree-modal .modal-footer .modal-close
+	{
+	float: right;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 2em;
+	margin: 6px 0px;
+	transition: all 750ms ease;
+}
+
+.braintree-donation-container .braintree-modal .modal-footer .modal-close:hover
+	{
+	background-color: #e0e0e0;
+	border-radius: 2px;
+}
+
+.braintree-modal .modal-footer .modal-submit,
+	.braintree-donation-container .inline-submit {
+	height: 36px;
+	line-height: 36px;
+	padding: 0 2em;
+	margin: 6px 0px;
+	border-radius: 4px;
+	font-size: 1em;
+}
+
+.braintree-donation-container .braintree-payment-method {
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	height: 56px;
+	background-color: #fff;
+	border-width: 1px 0px 1px 0px;
+	border-color: #DEE2E5;
+	border-style: solid;
+	margin-top: -1px;
+	cursor: pointer;
+	transition: background-color 350ms ease;
+}
+
+.braintree-donation-container .braintree-payment-method.selected {
+	background-color: #E8F5EB;
+}
+
+.braintree-donation-container .payment-method-description {
+	padding-left: 10px;
+	padding-top: 5px;
+	margin-top: 5px;
+	padding-bottom: 5px;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+.braintree-donation-container .payment-method-type {
+	display: inline-block;
+}
+
+.braintree-payment-methods .payment-method-description,
+	.paypal-payment-methods .payment-method-description {
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+.braintree-payment-methods .payment-method-type, .paypal-payment-methods .payment-method-type
+{
+	display: inline-block;
+	width: 44px;
+	height: 28px
+}
+
+.braintree-payment-methods .payment-method-type.MasterCard {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -317px;
+}
+
+.braintree-payment-methods .payment-method-type.Visa,
+.braintree-payment-methods .payment-method-type.ApplePay-Visa {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -429px;
+}
+
+.braintree-payment-methods .payment-method-type.Discover,
+.braintree-payment-methods .payment-method-type.ApplePay-Discover {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 84px auto;
+	background-position: 0 -199px;
+}
+
+.braintree-payment-methods .payment-method-type.Diners,
+.braintree-payment-methods .payment-method-type.ApplePay-Diners {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 110px auto;
+	background-position: 0 -230px;
+}
+
+.braintree-payment-methods .payment-method-type.Maestro,
+.braintree-payment-methods .payment-method-type.ApplePay-Maestro{
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -289px;
+}
+
+.braintree-payment-methods .payment-method-type.AmericanExpress,
+.braintree-payment-methods .payment-method-type.ApplePay-AmericanExpress {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -399px;
+}
+
+.braintree-payment-methods .payment-method-type.JCB,
+.braintree-payment-methods .payment-method-type.ApplePay-JCB {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+
+.braintree-payment-methods .payment-method-type.paypal,
+	.paypal-payment-methods .payment-method-type.paypal {
+	background-image: url('../img/payment-method-sprites.png');
+	background-size: 96px auto;
+	background-position: 0 -511px;
+}
+
+.payment_method_braintree_payment_gateway div.payment-method-buttons,
+	.payment_method_braintree_paypal_payments div.payment-method-buttons {
+	overflow: hidden;
+}
+
+.braintree-donation-payment-form div.payment-method-buttons,
+	.braintree-payment-methods div.payment-method-buttons {
+	overflow: hidden;
+}
+
+.braintree-donation-payment-form .payment-method-buttons a,
+	.braintree-payment-methods .payment-method-buttons a {
+	float: right;
+	color: #3c94d4;
+	background: none;
+	cursor: pointer;
+	font-size: 14px;
+	border: none;
+}
+
+.braintree-donation-container .braintree-accepted-payment-methods{
+	display: inline-block;
+}
+
+.braintree-donation-container .braintree-accepted-payment-methods span{
+	display: inline-block;
+	vertical-align: middle;
+	width: 44px;
+	height: 28px;
+	background-image: url('../img/payment-method-sprites.png');
+}
+
+.braintree-donation-container .braintree-accepted-payment-methods .payment-method-icon.master_card{
+	background-size: 86px auto;
+	background-position: 0 -317px;
+}
+
+.braintree-donation-container .braintree-accepted-payment-methods .payment-method-icon.visa{
+	background-size: 86px auto;
+	background-position: 0 -429px;
+}
+
+.braintree-donation-container .braintree-accepted-payment-methods .payment-method-icon.amex{
+	background-size: 86px auto;
+	background-position: 0 -399px;
+}
+
+.braintree-donation-container .braintree-accepted-payment-methods .payment-method-icon.discover{
+	background-size: 86px auto;
+	background-position: 0 -204px;
+}
+
+.braintree-donation-container .braintree-accepted-payment-methods .payment-method-icon.maestro{
+	background-size: 86px auto;
+	background-position: 0 -289px;
+}
+
+.braintree-donation-container .braintree-accepted-payment-methods .payment-method-icon.jcb{
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+
+.braintree-donation-container .braintree-accepted-payment-methods .payment-method-icon.diners_club_international{
+	background-size: 86px auto;
+	background-position: 0 -178px;
+}
+
+.braintree-donation-container .braintree-accepted-payment-methods .payment-method-icon.paypal{
+	background-size: 86px auto;
+	background-position: 0 -456px;
+}
+
+.braintree-donation-container .braintree-accepted-payment-methods .payment-method-icon.china_union_pay{
+	background-size: 86px auto;
+	background-position: 0 -492px;
+}
+
+ .field-container .select2-container{
+  	width: 80% !important;
+  }
+body.bfwc-body .bfwc-donation-button{
+	position: relative;
+    text-decoration: none;
+    background-color: #26a69a;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    outline: 0;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.18), 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+}
+body.bfwc-body .bfwc-donation-button:hover{
+	background-color: #2bbbad;
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+body.bfwc-body .bfwc-row{
+	margin-top: 10px;
+}
+body.bfwc-body .braintree-donation-container ul.payment_methods {
+	list-style: none;
+}
+body.bfwc-body .braintree-donation-container ul.payment_methods li{
+	margin: 10px 0px;
+}
+body.bfwc-body form.braintree-donation{
+	position: relative;
+}
+body.bfwc-body form.braintree-donation .bfwc-payment-loader{
+	width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 999999999999;
+    left: 0;
+    top: 0;
+}
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType{
+	background-image: url('../img/payment-method-sprites.png');
+    display: inline-block;
+    width: 44px;
+    height: 28px;
+    margin: 0px 10px 0px 0px;
+    background-repeat: no-repeat
+}
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.Visa,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.Visa{
+	background-size: 86px auto;
+	background-position: 0 -429px;
+}
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.Discover,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.Discover{
+	background-size: 84px auto;
+	background-position: 0 -199px;
+}
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.MasterCard,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.MasterCard{
+	background-size: 86px auto;
+	background-position: 0 -317px;
+}
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.Diners,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.Diners{
+	background-size: 110px auto;
+	background-position: 0 -230px;
+}
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.Maestro,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.Maestro{
+	background-size: 86px auto;
+	background-position: 0 -289px;
+}
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.AmericanExpress,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.AmericanExpress{
+	background-size: 86px auto;
+	background-position: 0 -399px;
+}
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.JCB,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.JCB{
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+body.bfwc-body .select2-container .select2-bfwc-chosen .select2-cardType.paypal,
+body.bfwc-body .select2-dropdown .select2-bfwc-result-label .select2-cardType.paypal{
+	background-size: 96px auto;
+	background-position: 0 -511px;
+}
+@media screen and (max-width: 992px) {
+	.braintree-modal {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 592px) {
+	.braintree-donation-container .braintree-donation-field-container .field-container
+		{
+		width: 100%
+	}
+	.braintree-donation-container .braintree-donation-field-container .field-container input,
+		.braintree-donation-container .braintree-donation-field-container .field-container select,
+		.braintree-donation-container .braintree-donation-field-container .field-container textarea
+		{
+		width: 100%
+	}
+	.braintree-donation-container .braintree-modal {
+		width: 90%;
+	}
+	.field-container .select2-container{
+  		width: 100% !important;
+  	}
+	
+}
